@@ -1,4 +1,4 @@
-# NLPCC 2026 Shared Task: Reliability of AI-Assisted Scientific Reporting
+# NLPCC 2026 Shared Task 10: Reliability of AI-Assisted Scientific Reporting
 
 [中文版本 (Chinese Version)](README_zh.md)
 

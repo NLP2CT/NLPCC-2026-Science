@@ -1,4 +1,4 @@
-# NLPCC 2026 共享任务：AI辅助科学报告的可靠性
+# NLPCC 2026 Shared Task 10：AI辅助科学报告的可靠性
 
 [English Version](README.md)
 

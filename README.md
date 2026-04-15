@@ -87,10 +87,10 @@ See the [Task Guidelines](GUIDELINES.md) for full definitions, data format, and 
 
 ## Contacts
 
-- Runzhe Zhan
-- Derek F. Wong
+- Runzhe Zhan (Contact) | [Homepage](https://runzhe.me/)
+- Derek F. Wong (Advisor) | [Homepage](https://www.fst.um.edu.mo/people/derekfw/)
 - Yutong Yao
-- Junchao Wu
+- Junchao Wu | [Homepage](https://junchaoiu.github.io/)
 - Jingkun Ma
 - Yanming Sun
 - Fengying Ye

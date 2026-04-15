@@ -85,10 +85,10 @@
 
 ## 联系人
 
-- 詹润哲
-- 黄辉
+- 詹润哲（Contact） | [Homepage](https://runzhe.me/)
+- 黄辉（Advisor） | [Homepage](https://www.fst.um.edu.mo/people/derekfw/)
 - 姚宇同
-- 吴俊潮
+- 吴俊潮 | [Homepage](https://junchaoiu.github.io/)
 - 马景坤
 - 孙燕明
 - 叶沣颖

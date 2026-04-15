@@ -1,16 +1,60 @@
-# NLPCC 2026 Shared Task 10：AI辅助科学报告的可靠性
+<div align="center">
+
+<h1>NLPCC 2026 共享任务 10：AI辅助科学报告的可靠性</h1>
+<p><em>本任务设置两个互补赛道，分别关注实验结果的陈述级忠实性和外部文献的引文级忠实性。</em></p>
+
+[![任务指南](https://img.shields.io/badge/%E4%BB%BB%E5%8A%A1%E6%8C%87%E5%8D%97-%E5%B7%B2%E5%8F%91%E5%B8%83-blue?style=for-the-badge)](GUIDELINES_ZH.md) [![数据](https://img.shields.io/badge/%E8%AE%AD%E7%BB%83%E5%BC%80%E5%8F%91%E6%95%B0%E6%8D%AE-%E5%B7%B2%E5%8F%91%E5%B8%83-green?style=for-the-badge)](data/) [![报名](https://img.shields.io/badge/%E6%8A%A5%E5%90%8D-%E5%BC%80%E6%94%BE%E4%B8%AD-orange?style=for-the-badge)](https://ocn0wnz7cc7b.feishu.cn/share/base/form/shrcnLJgG87xZ808RqZxypMTq5b) [![主页](https://img.shields.io/badge/%E4%B8%BB%E9%A1%B5-Live-purple?style=for-the-badge)](https://nlp2ct.github.io/NLPCC-2026-Task10-Science/)
+
+</div>
+
+<div align="center">
+  <p>
+    <a href="#最新动态"><b>最新动态</b></a> &bull;
+    <a href="#快速入口"><b>快速入口</b></a> &bull;
+    <a href="#简介"><b>简介</b></a> &bull;
+    <a href="#赛道概览"><b>赛道</b></a> &bull;
+    <a href="#日程安排"><b>日程</b></a> &bull;
+    <a href="#主办单位"><b>主办</b></a>
+  </p>
+</div>
 
 [English Version](README.md)
+
+---
+
+## 最新动态
+
+- **[2026/04/15]** 发布任务指南及两个赛道的训练开发数据。
+- **[2026/03/20]** 共享任务公告发布，开放报名。
+
+## 快速入口
+
+| | 链接 |
+|---|---|
+| 任务指南（中文 / EN） | [GUIDELINES_ZH.md](GUIDELINES_ZH.md) / [GUIDELINES.md](GUIDELINES.md) |
+| 训练开发数据 | [`data/`](data/) |
+| 报名表 | [链接](https://ocn0wnz7cc7b.feishu.cn/share/base/form/shrcnLJgG87xZ808RqZxypMTq5b) |
+| 报名邮箱 | [nlp2ct.runzhe@gmail.com](mailto:nlp2ct.runzhe@gmail.com) |
+| 任务主页 | [nlp2ct.github.io/NLPCC-2026-Task10-Science](https://nlp2ct.github.io/NLPCC-2026-Task10-Science/) |
+
+> **数据使用说明：**比赛期间，所有已发布的任务数据仅限用于参加 NLPCC 2026 Shared Task 10，相关署名权及发布权均归组织方所有；未经许可，不得以其他名义对数据进行二次分发、镜像发布、重新发布、重新命名或另行发布。比赛结束后，所有训练和测试数据将以开放协议重新分发，并可用于科研用途。
 
 ## 简介
 
 随着生成式人工智能和智能体人工智能不断融入科学发现和研究流程，相关技术已被广泛用于辅助科学写作，例如总结实验结果、撰写研究结论，以及生成带有引文支持的科学表述。
 
-然而，近期研究表明，AI 生成的科学报告常常会对结论作出超出原始证据支持范围的泛化表述。基于此，本共享任务聚焦于 AI 辅助科研中的“报告层”问题，围绕以下核心问题展开：
+然而，近期研究表明，AI 生成的科学报告常常会对结论作出超出原始证据支持范围的泛化表述。本共享任务聚焦于 AI 辅助科研中的"报告层"问题，围绕以下核心问题展开：
 
-给定科学证据与一条由 AI 生成的科学陈述，系统能否判断该陈述是否忠实反映了其所概括或引用的证据？
+> **给定科学证据与一条由 AI 生成的科学陈述，系统能否判断该陈述是否忠实反映了其所概括或引用的证据？**
 
-## 赛道说明
+## 赛道概览
+
+| | Track 1 | Track 2 |
+|---|---|---|
+| **方向** | 面向实验结果的陈述级忠实性判定 | 面向外部证据的引文级忠实性判定 |
+| **输入** | 证据材料 + 陈述段落（按句切分） | 原子级科学陈述 + 被引论文全文 |
+| **输出** | 每句一个标签 | 一个支持关系标签 + 排序的证据段落 ID |
+| **指标** | 句子 Macro-F1 + 段落完全匹配（PEM） | 标签 Macro-F1 + Joint@3 |
 
 ### Track 1：面向实验结果的陈述级忠实性判定
 
@@ -22,10 +66,18 @@
 
 系统需要判断该论文与陈述之间的关系属于以下哪一类：直接支持、部分支持、仅主题相关但不构成证据支持、完全无关。此外，参赛系统还需提交一个按相关性排序的证据段落编号列表。
 
-## 报名方式
+完整赛道定义、数据格式及示例详见[任务指南](GUIDELINES_ZH.md)。
 
-- 报名表：[https://ocn0wnz7cc7b.feishu.cn/share/base/form/shrcnLJgG87xZ808RqZxypMTq5b](https://ocn0wnz7cc7b.feishu.cn/share/base/form/shrcnLJgG87xZ808RqZxypMTq5b)
-- 报名邮箱：[nlp2ct.runzhe@gmail.com](mailto:nlp2ct.runzhe@gmail.com)
+## 日程安排
+
+| 日期 | 事项 |
+|---|---|
+| 2026 年 3 月 20 日 | 共享任务公告发布；开放报名 |
+| 2026 年 4 月 15 日 | 发布任务指南与训练开发数据 |
+| 2026 年 5 月 25 日 | 报名截止；发布公开测试数据与排行榜**（第一阶段）** |
+| 2026 年 6 月 11 日 | 发布隐藏测试数据（不含标签）**（第二阶段）** |
+| 2026 年 6 月 20 日 | 结果提交截止日（第一阶段 + 第二阶段） |
+| 2026 年 6 月 30 日 | 公布评测结果；征集系统报告 |
 
 ## 主办单位
 
